@@ -142,6 +142,7 @@
     <ClCompile Include="STL_Test.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Allocator_Test.h" />
     <ClInclude Include="GenericProgramming_Test.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

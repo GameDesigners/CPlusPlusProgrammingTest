@@ -475,9 +475,13 @@ int main()
 {
 	//test_unordered_multiset(1000000);
 
+	//使用模板类
+	/*
 	GenericProgramming_Test<Stone> stoneCompare;
 	Stone s1(100);
 	Stone s2(200);
 	
 	cout<<"s1和s2中最小的石头为"<< stoneCompare.min(s1, s2).grass<<"吨";
+
+	*/
 }
