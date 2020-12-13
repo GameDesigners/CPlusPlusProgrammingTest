@@ -1,2 +1,4 @@
 E:\ZhuSenlin Project\C++\STL_Test\Debug\STL_Test.exe
 E:\ZhuSenlin Project\C++\STL_Test\Debug\STL_Test.pdb
+D:\GitProjects\CPlusPlusSTL_TestProject\Debug\STL_Test.exe
+D:\GitProjects\CPlusPlusSTL_TestProject\Debug\STL_Test.pdb

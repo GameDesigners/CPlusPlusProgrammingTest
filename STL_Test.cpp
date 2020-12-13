@@ -16,6 +16,9 @@
 #include<exception>
 #include<algorithm>
 
+
+#include "GenericProgramming_Test.h"
+
 using std::cin;
 using std::cout;
 using std::string;
@@ -89,7 +92,7 @@ int compareStrings(const void* a, const void* b)
 }
 #pragma endregion
 
-#pragma 测试容器的方法
+#pragma region 测试容器的方法
 /// <summary>
 /// 测试array
 /// </summary>
@@ -470,5 +473,11 @@ void test_unordered_multiset(const long& value)
 
 int main()
 {
-	test_unordered_multiset(1000000);
+	//test_unordered_multiset(1000000);
+
+	GenericProgramming_Test<Stone> stoneCompare;
+	Stone s1(100);
+	Stone s2(200);
+	
+	cout<<"s1和s2中最小的石头为"<< stoneCompare.min(s1, s2).grass<<"吨";
 }

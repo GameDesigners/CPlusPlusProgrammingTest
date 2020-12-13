@@ -141,6 +141,9 @@
   <ItemGroup>
     <ClCompile Include="STL_Test.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GenericProgramming_Test.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
