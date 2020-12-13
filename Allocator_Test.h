@@ -8,6 +8,7 @@ void UseAllocator()
 	
 }
 
+#pragma region G2.9°æ±¾
 template<class T>
 struct __list_node
 {
@@ -56,3 +57,26 @@ public:
 protected:
 	link_type node;
 };
+#pragma endregion
+
+#pragma region G4.9
+struct _List_node_base
+{
+	_List_node_base* _M_next;
+	_List_node_base* _M_prev;
+};
+
+template<typename _Tp>
+struct _List_node : public _List_node_base
+{
+	_Tp _M_data;
+};
+
+template<typename _Tp,
+	     typename _Alloc=std::allocator<_Tp>>
+class list :protected _List_node_base<_Tp>
+{
+public:
+	typedef _List_iterator<_Tp> iterator;
+};
+#pragma endregion

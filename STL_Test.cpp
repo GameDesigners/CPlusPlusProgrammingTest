@@ -484,4 +484,6 @@ int main()
 	cout<<"s1和s2中最小的石头为"<< stoneCompare.min(s1, s2).grass<<"吨";
 
 	*/
+
+	cout << "STL中list的大小：" << sizeof(std::list<char>) << endl;
 }
