@@ -143,7 +143,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Allocator_Test.h" />
+    <ClInclude Include="array_source_code.h" />
+    <ClInclude Include="deque_source_code.h" />
     <ClInclude Include="GenericProgramming_Test.h" />
+    <ClInclude Include="iterator_traits_SourceCode.h" />
+    <ClInclude Include="STL_Test.h" />
+    <ClInclude Include="vector_iterator.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

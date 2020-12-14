@@ -26,5 +26,20 @@
     <ClInclude Include="Allocator_Test.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="iterator_traits_SourceCode.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vector_iterator.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="array_source_code.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="deque_source_code.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="STL_Test.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

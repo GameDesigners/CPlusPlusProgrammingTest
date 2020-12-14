@@ -1,2 +1,8 @@
 ﻿  STL_Test.cpp
-  STL_Test.vcxproj -> D:\GitProjects\CPlusPlusSTL_TestProject\Debug\STL_Test.exe
+E:\ZhuSenlin Project\C++\STL_Test\STL_Test.cpp(27,28): warning C4018: “<”: 有符号/无符号不匹配
+E:\ZhuSenlin Project\C++\STL_Test\STL_Test.cpp(30,28): warning C4018: “<”: 有符号/无符号不匹配
+E:\ZhuSenlin Project\C++\STL_Test\array_source_code.h(82,26): warning C4551: 缺少参数列表的函数调用
+E:\ZhuSenlin Project\C++\STL_Test\array_source_code.h(81): message : 在编译 类 模板 成员函数“int &CustomSTL::G4_9::array<int,6>::at(CustomSTL::G4_9::array<int,6>::size_type)”时
+E:\ZhuSenlin Project\C++\STL_Test\STL_Test.cpp(31): message : 查看对正在编译的函数 模板 实例化“int &CustomSTL::G4_9::array<int,6>::at(CustomSTL::G4_9::array<int,6>::size_type)”的引用
+E:\ZhuSenlin Project\C++\STL_Test\STL_Test.cpp(24): message : 查看对正在编译的 类 模板 实例化“CustomSTL::G4_9::array<int,6>”的引用
+  STL_Test.vcxproj -> E:\ZhuSenlin Project\C++\STL_Test\Debug\STL_Test.exe
