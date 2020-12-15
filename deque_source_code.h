@@ -1,11 +1,12 @@
 /*
 *   Date：2020.12.14
 *   Describe: STL.array Source Code
-*   About Version: TR1 / GNU4.9
+*   About Version: TR1
 */
 
 #pragma once
-#include <xmemory>
+#include<xmemory>
+
 namespace CustomSTL
 {
 #pragma region G2.9
@@ -27,6 +28,93 @@ namespace CustomSTL
 			T* first;
 			T* last;
 			map_pointer node;
+			//如果分配内存大小大于512字节时，就每一个缓冲放一个（因为太大了）
+			inline std::size_t __deque_buf_size(size_t n, size_t sz){	return n != 0 ? n : (sz < 512 ? size_t(512 / sz) : size_t(1));	}
+
+			reference operator*() const { return *cur; }
+			pointer   operator->() const { return &(operator*()); }  //?为何返回cur
+			difference_type operator-(const self& x) { return difference_type(__deque_buf_size()) * (node - x.node - 1) + (cur - first) + (x.last - x.cur); }
+			self& operator++()
+			{
+				++cur;
+				if (cur == last)
+				{
+					set_node(node + 1);
+					cur = first;
+				}
+				return *this;
+			}
+
+			self operator++(int)
+			{
+				self tmp = *this;
+				++ *this;
+				return tmp;
+			}
+
+			self& operator--()
+			{
+				if (cur == first)
+				{
+					set_node(node - 1);
+					cur = last;
+				}
+				--cur;
+				return *this;
+			}
+
+			self operator--(int)
+			{
+				self tmp=*this;
+				--* this;
+				return tmp;
+			}
+
+			self& operator+=(difference_type n)
+			{
+				difference_type offset = n + (cur - first);
+				if (offset >= 0 && offset < difference_type(__deque_buf_size()))
+					cur += n;  //两者处在同一个连续空间中
+				else
+				{
+					difference_type node_offset = offset > 0 ? offset / difference_type(__deque_buf_size()) : -difference_type((-offset - 1) / __deque_buf_size()) - 1;
+					//切换到下一个缓冲区
+					set_node(node + node_offset);
+					//切换至正确元素
+					cur = first + (offset - node_offset * difference_type(__deque_buf_size()));
+				}
+				return *this;
+			}
+			
+			self operator+(difference_type n) const
+			{
+				self tmp = *this;
+				return tmp += n;
+			}
+
+			self& operator-=(difference_type n)
+			{
+				return *this += -n;
+			}
+
+			self operator-(difference_type n) const
+			{
+				self tmp = *this;
+				return tmp -= n;
+			}
+
+			reference operator[](difference_type n) const
+			{
+				return *(*this + n);
+			}
+
+			void set_node(map_pointer new_node)
+			{
+				//更新迭代器的数据
+				node = new_node;
+				first = *new_node;
+				last = new_node + difference_type(__deque_buf_size());
+			}
 		};
 
 		//buffersize default value is zero:
@@ -36,6 +124,7 @@ namespace CustomSTL
 		public:
 			typedef T  value_type;
 			typedef T* pointer;
+			typedef T& reference;
 			typedef __deque_iterator<T, T&, T*, BufferSize> iterator;
 		protected:
 			typedef T**          map_pointer;
@@ -46,21 +135,20 @@ namespace CustomSTL
 			iterator    finish;
 			map_pointer map;
 			size_type   map_size;
-
-		protected:
-			inline std::size_t __deque_buf_size(size_t n, size_t sz)
-			{
-				//如果分配内存大小大于512字节时，就每一个缓冲放一个（因为太大了）
-				return n != 0 ? n : (sz < 512 ? size_t(512 / sz) : size_t(1));
-			}
+			
 
 		public:
 			iterator begin() { return start; }
 			iterator end()   { return finish; }
-			size_type size() const { return finish - start; }
-			value_type front() { return **start.node; }
-			value_type back() { return **finish.node; };
-
+			size_type size() const { return finish - start; }  //！减符号已经重载了
+			reference front() { return *start; }
+			reference back()  
+			{ 
+				iterator tmp = finish;
+				--tmp;
+				return *tmp;
+			};
+			bool empty() { return start == finish; }
 			/// <summary>
 			/// 插入
 			/// </summary>
@@ -87,6 +175,7 @@ namespace CustomSTL
 			
 			iterator push_front(const value_type& x){}
 			iterator push_back(const value_type& x) {}
+
 
 		protected:
 			iterator insert_aux(iterator pos, const value_type& x)

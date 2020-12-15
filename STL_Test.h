@@ -296,6 +296,7 @@ void test_deque(const long& value)
 	cout << "deque.front()=" << c.front() << endl;               //首元素
 	cout << "deque.back()=" << c.back() << endl;                 //尾元素
 	cout << "deque.max_size()=" << c.max_size() << endl;         //最大容量 
+	
 	//EndDebug.............................................................
 
 	string target = get_a_target_string();

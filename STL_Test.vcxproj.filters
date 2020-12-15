@@ -41,5 +41,14 @@
     <ClInclude Include="STL_Test.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="queue_source_code.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stack_source_code.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="rb_tree_source_code.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
