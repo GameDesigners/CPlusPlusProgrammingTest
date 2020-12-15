@@ -3,6 +3,7 @@
 #include "GenericProgramming_Test.h"
 #include "array_source_code.h"
 #include "deque_source_code.h"
+#include "rb_tree_source_code.h"
 
 using std::cout;
 using std::endl;
@@ -20,7 +21,7 @@ int main()
 	cout<<"s1和s2中最小的石头为"<< stoneCompare.min(s1, s2).grass<<"吨";
 
 	*/
-
+	cout << "Custom::rb_tree 's size:" << sizeof(CustomSTL::rb_tree<int,int,int,int>) << endl;
 	CustomSTL::G4_9::array<int, 6> myArray;
 	auto begin = myArray.begin();
 	auto end = myArray.end();

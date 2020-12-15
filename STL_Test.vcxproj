@@ -147,6 +147,9 @@
     <ClInclude Include="deque_source_code.h" />
     <ClInclude Include="GenericProgramming_Test.h" />
     <ClInclude Include="iterator_traits_SourceCode.h" />
+    <ClInclude Include="queue_source_code.h" />
+    <ClInclude Include="rb_tree_source_code.h" />
+    <ClInclude Include="stack_source_code.h" />
     <ClInclude Include="STL_Test.h" />
     <ClInclude Include="vector_iterator.h" />
   </ItemGroup>

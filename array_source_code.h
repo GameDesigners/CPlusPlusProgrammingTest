@@ -6,9 +6,9 @@
 
 #pragma once
 
-#include <cstddef>  //std::size_t
-#include <xstddef>  //std::addressof
-#include <stdexcept>//std::_Throw_range_error
+#include<cstddef>  //std::size_t
+#include<xstddef>  //std::addressof
+#include<stdexcept>//std::_Throw_range_error
 
 namespace CustomSTL
 {
