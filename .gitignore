@@ -65,6 +65,7 @@ x64/Debug/STL_Test.ilk
 x64/Debug/STL_Test.exe.recipe
 x64/Debug/STL_Test.exe
 .vs/STL_Test/v16/ipch/AutoPCH/e494882857973dd9/STL_TEST.ipch
+<<<<<<< HEAD
 Debug/vc142.pdb
 Debug/vc142.idb
 Debug/STL_Test.vcxproj.FileListAbsolute.txt
@@ -79,3 +80,5 @@ Debug/STL_Test.log
 Debug/STL_Test.ilk
 Debug/STL_Test.exe
 .vs/STL_Test/v16/.suo
+=======
+>>>>>>> 71c778183b5f8a60de8c7c4fd295ed5fac7ef609
