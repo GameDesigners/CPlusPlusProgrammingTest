@@ -8,7 +8,11 @@ namespace CustomSTL
 
 	};
 
-	template<class Key,class Value,class KeyOfValue,class Compare,class Alloc = std::allocator<Value>>
+	template<class Key,
+		     class Value,      //value=key+data
+		     class KeyOfValue, //key's type
+		     class Compare,    //±È½Ïº¯Êý
+		     class Alloc = std::allocator<Value>>
 	class rb_tree
 	{
 	protected:
