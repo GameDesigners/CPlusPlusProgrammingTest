@@ -1,2 +1,5 @@
 ﻿  Main.cpp
+  STLContainer.cpp
+  正在生成代码...
+E:\ZhuSenlin Project\C++\CPlusPlusProgramming\CPlusPlusProgramming\STLContainer.h(22): warning C4715: “STLContainer_Vec<int>::operator[]”: 不是所有的控件路径都返回值
   CPlusPlusProgramming.vcxproj -> E:\ZhuSenlin Project\C++\CPlusPlusProgramming\Debug\CPlusPlusProgramming.exe

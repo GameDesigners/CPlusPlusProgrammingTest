@@ -24,12 +24,30 @@
     <ClCompile Include="Container.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Less_than.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="STLContainer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Vector.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Container.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Less_than.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="VariadicTemplate.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomIOStream.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="STLContainer.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

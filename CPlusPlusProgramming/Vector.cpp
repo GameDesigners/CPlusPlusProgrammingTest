@@ -1,33 +1,33 @@
 #include "Vector.h"
 
-template<typename T>
-Vector<T>::Vector(std::initializer_list<T> l) {
+template<typename value_type>
+Vector<value_type>::Vector(std::initializer_list<value_type> l) {
 	count = sizeof(l) / sizeof(int);
-	elem = new T[count];
+	elem = new value_type[count];
 }
 
-template<typename T>
-Vector<T>::Vector(int c) {
+template<typename value_type>
+Vector<value_type>::Vector(int c) {
 	count = c;
-	elem = new T[c];
+	elem = new value_type[c];
 }
 
-template<typename T>
-Vector<T>::Vector(const Vector<T>& a){
+template<typename value_type>
+Vector<value_type>::Vector(const Vector<value_type>& a){
 	/*
 	    重新分配空间的做法
     */
 	count = a.size();
-	elem = new T[count];
+	elem = new value_type[count];
 
 	for (int index = 0; index != count; index++)
 		elem[index] = a.elem[index];
 }
 
-template<typename T>
-Vector<T>& Vector<T>::operator=(const Vector<T>& a) {
+template<typename value_type>
+Vector<value_type>& Vector<value_type>::operator=(const Vector<value_type>& a) {
 	count = a.size();
-	double* p = new T[count];
+	double* p = new value_type[count];
 	for (size_t i = 0; i!= count; i++)
 		p[i] = a.elem[i];
 
