@@ -50,5 +50,11 @@
     <ClInclude Include="STLContainer.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="ThreadTest.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="UtilityTool.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

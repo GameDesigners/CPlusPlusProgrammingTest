@@ -1,12 +1,15 @@
 #include <iostream>
 #include <cmath>
-#include<vector>
+#include <vector>
 #include <thread>
+#include <typeinfo>  //值的类型信息
 #include "Vector.cpp"
 #include "Less_than.h"
 #include "VariadicTemplate.h"
 #include "CustomIOStream.h"
 #include "STLContainer.h"
+#include "ThreadTest.h"
+#include "UtilityTool.h"
 
 using namespace std;
 
@@ -73,4 +76,17 @@ int main()
 
 	STLContainer_Vec<int> customVecs{ 1, 2, 3, 4, 5 };
 	cout << customVecs[5] << endl;
+
+
+	//测试使用线程
+	//user_useThread();
+
+	//use_clock();
+	//use_random_engine();
+
+	//use_Random_int_DrawHistogram(0, 6);
+	Value<int> v1{ 1 };
+	Value<float> v2{ 2.2f };
+	cout << endl << typeid(v1 + v2).name() << endl;
+	cout << (v1 + v2).val << endl;
 }

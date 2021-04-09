@@ -150,6 +150,8 @@
     <ClInclude Include="CustomIOStream.h" />
     <ClInclude Include="Less_than.h" />
     <ClInclude Include="STLContainer.h" />
+    <ClInclude Include="ThreadTest.h" />
+    <ClInclude Include="UtilityTool.h" />
     <ClInclude Include="VariadicTemplate.h" />
     <ClInclude Include="Vector.h" />
   </ItemGroup>
